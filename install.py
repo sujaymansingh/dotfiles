@@ -13,6 +13,7 @@ def main():
     ensure_symlink("./vim", "~/.vim")
     ensure_symlink("./vim/vimrc", "~/.vimrc")
     ensure_symlink("./tmux.conf", "~/.tmux.conf")
+    ensure_symlink("./zshrc", "~/.zshrc")
 
 
 def ensure_symlink(source_path, target_path):
