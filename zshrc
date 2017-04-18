@@ -25,11 +25,11 @@ chevron() {
 
 local ret_status_colours="%(?:%{$bg[blue]%}:%{$bg[red]%})"
 
-local ret_status_ok="%{$bg[blue]%}  $(chevron blue cyan)"
-local ret_status_bad="%{$bg[red]%}  $(chevron red cyan)"
+local ret_status_ok="%{$bg[blue]%}  $(chevron blue yellow)"
+local ret_status_bad="%{$bg[red]%}  $(chevron red yellow)"
 local ret_status="%(?:${ret_status_ok}:${ret_status_bad})"
-local username="%{$fg[black]%} %n $(chevron cyan blue)"
-local cwd="%{$fg[black]%} %~ %{$fg[blue]%}%{$bg[black]%}$CHEVRON_SYMBOL%{$reset_color%}"
+local username="%{$fg[black]%} %n $(chevron yellow green)"
+local cwd="%{$fg[black]%} %~ %{$fg[green]%}%{$bg[black]%}$CHEVRON_SYMBOL%{$reset_color%}"
 
 PROMPT='${ret_status}${username}$cwd $(git_prompt_info)
 $ '
