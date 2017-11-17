@@ -1,4 +1,4 @@
-syntax on
+:syntax on
 :set background=dark
 
 " Highlight searches
@@ -13,6 +13,9 @@ syntax on
 :set expandtab
 :set shiftwidth=4
 
+" http://stackoverflow.com/questions/11560201/backspace-key-not-working-in-vim-vi#11560415
+:set backspace=2
+
 " Force myself to use HJKL
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -22,6 +25,7 @@ noremap <Right> <NOP>
 call plug#begin('~/.vim/plugged')
 Plug 'elixir-lang/vim-elixir'
 Plug 'vim-syntastic/syntastic'
+Plug 'chase/vim-ansible-yaml'
 call plug#end()
 
 " Syntastic settings
@@ -29,3 +33,6 @@ let g:syntastic_enable_signs=0
 let g:syntastic_check_on_open = 1
 :highlight SyntasticError ctermbg=red ctermfg=black cterm=underline
 :highlight SyntasticWarning ctermbg=green ctermfg=black cterm=underline
+
+" For macvim
+:set guifont=Ubuntu\ Mono:h14
