@@ -1,7 +1,7 @@
 import logging
 import sys
 
-from os import path, remove, symlink
+from os import getenv, path, mkdir, remove, symlink
 
 
 def main():
@@ -14,6 +14,9 @@ def main():
     ensure_symlink("./vim/vimrc", "~/.vimrc")
     ensure_symlink("./tmux.conf", "~/.tmux.conf")
     ensure_symlink("./zshrc", "~/.zshrc")
+    ensure_directory("~/.config")
+    ensure_symlink("./pycodestyle", "~/.pycodestyle")
+    ensure_symlink("./pycodestyle", "~/.config/flake8")
 
 
 def ensure_symlink(source_path, target_path):
@@ -48,6 +51,23 @@ def ensure_symlink(source_path, target_path):
         raise ValueError(
             "Expected a symlink at {0}, but found a file or directory".format(abs_target_path)
         )
+
+
+def ensure_directory(raw_directory_path):
+    """Ensure a directory exists with the given path.
+    """
+    home_dir = getenv("HOME", "")
+    directory_path = raw_directory_path.replace("~", home_dir)
+    log = start_logger("Ensuring directory  %s exists", directory_path)
+
+    if path.exists(directory_path):
+        if path.isdir(directory_path):
+            log("%s already exists", directory_path)
+        else:
+            raise ValueError("%s already exists, but isn't a directory")
+    else:
+        log("Creating path %s", directory_path)
+        mkdir(directory_path)
 
 
 def start_logger(title, *args, **kwargs):
