@@ -1,0 +1,15 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	email = sujay.mansingh@gmail.com
+	name = Sujay Mansingh
+[color]
+	ui = true
+[core]
+	autocrlf = input
+[alias]
+        lg = log --pretty='format:%h %cr [%cN] %s'
+	diffc = diff --cached

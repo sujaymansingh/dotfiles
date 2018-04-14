@@ -17,6 +17,7 @@ def main():
     ensure_directory("~/.config")
     ensure_symlink("./pycodestyle", "~/.pycodestyle")
     ensure_symlink("./pycodestyle", "~/.config/flake8")
+    ensure_symlink("./gitconfig", "~/.gitconfig")
 
 
 def ensure_symlink(source_path, target_path):
