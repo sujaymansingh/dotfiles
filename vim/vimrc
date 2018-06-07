@@ -26,6 +26,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'elixir-lang/vim-elixir'
 Plug 'vim-syntastic/syntastic'
 Plug 'chase/vim-ansible-yaml'
+Plug 'tell-k/vim-autopep8'
 call plug#end()
 
 " Syntastic settings
@@ -38,3 +39,7 @@ let g:syntastic_check_on_open = 1
 
 " For macvim
 :set guifont=Ubuntu\ Mono:h14
+
+let g:autopep8_max_line_length=120
+let g:autopep8_on_save=1
+let g:autopep8_disable_show_diff=1
