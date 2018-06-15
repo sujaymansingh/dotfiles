@@ -23,6 +23,8 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
+export EDITOR=vim
+
 # Any local machine stuff put in ~/.zshrc-local
 if [[ -a ~/.local-zshrc ]]
 then
