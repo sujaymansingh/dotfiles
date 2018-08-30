@@ -10,6 +10,7 @@
 	ui = true
 [core]
 	autocrlf = input
+	excludesfile = /Users/sujay/.gitignore
 [alias]
         lg = log --pretty='format:%h %cr [%cN] %s'
 	diffc = diff --cached
