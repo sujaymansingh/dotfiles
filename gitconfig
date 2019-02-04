@@ -1,17 +1,17 @@
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
 [user]
-	email = sujay.mansingh@gmail.com
-	name = Sujay Mansingh
+    email = sujay.mansingh@gmail.com
+    name = Sujay Mansingh
 [color]
-	ui = true
+    ui = true
 [core]
-	autocrlf = input
-	excludesfile = /Users/sujay/.gitignore
+    autocrlf = input
+    excludesfile = /Users/sujay/.gitignore
 [alias]
-        lg = log --pretty='format:%h %cr [%cN] %s'
-        diffc = diff --cached
-        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lg = log --pretty='format:%h %cr [%cN] %s'
+    diffc = diff --cached
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
