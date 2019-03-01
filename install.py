@@ -3,7 +3,6 @@ import sys
 
 from os import getenv, path, mkdir, remove, symlink
 
-
 def main():
     quiet_mode = "-q" in sys.argv[1:]
 
@@ -11,6 +10,7 @@ def main():
         logging.basicConfig(level=logging.INFO, format="%(message)s")
 
     ensure_symlink("./vim", "~/.vim")
+    ensure_symlink("./nvim", "~/.config/nvim")
     ensure_symlink("./vim/vimrc", "~/.vimrc")
     ensure_symlink("./tmux.conf", "~/.tmux.conf")
     ensure_symlink("./zshrc", "~/.zshrc")
