@@ -1,5 +1,5 @@
 " TODO: How can I avoid hardcoding this?
-let g:python3_host_prog = '/Users/sujay/venvs/neovim/bin/python3'
+let g:python3_host_prog = '~/venvs/neovim/bin/python3'
 
 :syntax on
 :set background=dark " Highlight searches
