@@ -2,6 +2,7 @@ import logging
 import sys
 
 from os import getenv, path, mkdir, remove, symlink
+from subprocess import check_call
 
 def main():
     quiet_mode = "-q" in sys.argv[1:]
@@ -19,6 +20,9 @@ def main():
     ensure_symlink("./pycodestyle", "~/.config/flake8")
     ensure_symlink("./gitconfig", "~/.gitconfig")
     ensure_symlink("./gitignore", "~/.gitignore")
+
+    ensure_directory("~/venvs")
+    ensure_virtualenv("~/venvs/neovim")
 
 
 def ensure_symlink(source_path, target_path):
@@ -80,6 +84,22 @@ def start_logger(title, *args, **kwargs):
         logging.info(indented_line, *args, **kwargs)
 
     return log
+
+
+def ensure_virtualenv(venv_path):
+    absolute_path = path.expanduser(venv_path)
+    log = start_logger("Ensuring virtualenv %s exists", absolute_path)
+    if path.exists(absolute_path):
+        log("%s already exists", absolute_path)
+        return
+    run_command(["python3", "-m", "venv", absolute_path], log)
+    pip_path = path.join(absolute_path, "bin", "pip")
+    run_command([pip_path, "install", "-r", "neovim.requirements.txt"], log)
+
+def run_command(command, log):
+    log("Running {}".format(" ".join(command)))
+    check_call(command)
+
 
 
 if __name__ == "__main__":
