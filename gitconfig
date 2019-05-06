@@ -4,7 +4,7 @@
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
 [user]
-    email = sujay.mansingh@gmail.com
+    email = info@sujaymansingh.com
     name = Sujay Mansingh
 [color]
     ui = true
