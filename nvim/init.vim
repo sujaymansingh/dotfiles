@@ -30,5 +30,11 @@ noremap <Right> <NOP>
 :tnoremap <Esc> <C-\><C-n>
 
 call plug#begin()
+
+" Python
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+
 call plug#end()
