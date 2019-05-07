@@ -12,6 +12,6 @@
     autocrlf = input
     excludesfile = /Users/sujay/.gitignore
 [alias]
-    lg = log --pretty='format:%h %cr [%cN] %s'
+    lg = log --pretty='format:%Cgreen%h%Creset %cr [%C(yellow)%cN%Creset] %s'
     diffc = diff --cached
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
