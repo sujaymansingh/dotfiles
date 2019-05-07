@@ -24,6 +24,7 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 :autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+:autocmd FileType go setlocal ts=4 sts=4 sw=4 noexpandtab
 
 " To map <Esc> to exit terminal-mode:
 " https://neovim.io/doc/user/nvim_terminal_emulator.html
