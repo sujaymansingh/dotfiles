@@ -1,0 +1,5 @@
+black
+ipython
+jupyter
+python-json-logger==0.1.11
+pyyaml
