@@ -11,11 +11,11 @@ def main():
         logging.basicConfig(level=logging.INFO, format="%(message)s")
 
     ensure_symlink("./vim", "~/.vim")
+    ensure_directory("~/.config")
     ensure_symlink("./nvim", "~/.config/nvim")
     ensure_symlink("./vim/vimrc", "~/.vimrc")
     ensure_symlink("./tmux.conf", "~/.tmux.conf")
     ensure_symlink("./zshrc", "~/.zshrc")
-    ensure_directory("~/.config")
     ensure_symlink("./pycodestyle", "~/.pycodestyle")
     ensure_symlink("./pycodestyle", "~/.config/flake8")
     ensure_symlink("./gitconfig", "~/.gitconfig")
