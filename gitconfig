@@ -17,3 +17,5 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [include]
     path = ~/.local-gitconfig
+[rebase]
+	autoStash = true
