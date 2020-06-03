@@ -34,8 +34,12 @@ call plug#begin()
 
 " Python
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'psf/black'
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
+
+" Git
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
