@@ -19,3 +19,5 @@
     path = ~/.local-gitconfig
 [rebase]
 	autoStash = true
+[commit]
+	verbose = true
