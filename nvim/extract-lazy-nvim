@@ -1,0 +1,13 @@
+#! /bin/bash
+
+set -e
+
+targetdir=$1
+workingdir=/tmp/$!
+
+mkdir -p $targetdir
+mkdir -p $workingdir
+
+curl -sL https://github.com/folke/lazy.nvim/tarball/stable | tar -x -C $workingdir
+mv $workingdir/folke-*/* $targetdir
+

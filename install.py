@@ -12,8 +12,11 @@ def main():
 
     ensure_symlink("./vim", "~/.vim")
     ensure_directory("~/.config")
+
     ensure_symlink("./nvim", "~/.config/nvim")
-    ensure_symlink("./vim/vimrc", "~/.vimrc")
+    log = start_logger("Installing rust-analyzer")
+    run_command(["rustup", "component", "add", "rust-analyzer", "rust-src"], log)
+
     ensure_symlink("./tmux.conf", "~/.tmux.conf")
     ensure_symlink("./zshrc", "~/.zshrc")
     ensure_symlink("./pycodestyle", "~/.pycodestyle")
