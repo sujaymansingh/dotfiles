@@ -14,13 +14,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    'tanvirtin/monokai.nvim',
     'rust-lang/rust.vim',
     {'neoclide/coc.nvim',  branch = 'release'},
 })
-
-require('monokai').setup {}
-require('monokai').setup { palette = require('monokai').ristretto }
 
 require('cocconfig')
 

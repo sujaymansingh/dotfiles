@@ -15,7 +15,6 @@ opt.fileencoding = 'utf8'
 
 -- [[ Theme ]]
 opt.syntax = "ON"
-opt.termguicolors = true
 
 -- [[ Search ]]
 opt.incsearch = true
