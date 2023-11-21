@@ -2,12 +2,13 @@
 local opt = vim.opt
 
 -- [[ Context ]]
-opt.colorcolumn = '80'
+opt.colorcolumn = '100'
+opt.textwidth = 100
 opt.number = true
 opt.ruler = true
 -- opt.relativenumber = true
 opt.scrolloff = 5
--- opt.signcolumn = "yes"
+opt.signcolumn = "yes"
 
 -- [[ Filetypes ]]
 opt.encoding = 'utf8'
@@ -15,6 +16,10 @@ opt.fileencoding = 'utf8'
 
 -- [[ Theme ]]
 opt.syntax = "ON"
+opt.statusline = '  %l,%c: %f %h%w%m%r'
+
+-- Otherwise nvim 'claims' right-clicks and also Command-C doesn't work
+opt.mouse = ""
 
 -- [[ Search ]]
 opt.incsearch = true
