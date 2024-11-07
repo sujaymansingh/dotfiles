@@ -19,6 +19,7 @@ def main():
     ensure_symlink("./pycodestyle", "~/.pycodestyle")
     ensure_symlink("./pycodestyle", "~/.config/flake8")
     ensure_symlink("./gitconfig", "~/.gitconfig")
+    ensure_symlink("./gitconfig.amazon", "~/.gitconfig.amazon")
     ensure_symlink("./gitignore", "~/.gitignore")
 
     ensure_directory("~/venvs")

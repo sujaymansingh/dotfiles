@@ -25,3 +25,5 @@
 	ff = only
 [init]
 	defaultBranch = main
+[includeIf "gitdir:~/workspace/"]
+  path = .gitconfig.amazon
