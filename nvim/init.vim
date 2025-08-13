@@ -1,6 +1,3 @@
-" TODO: How can I avoid hardcoding this?
-let g:python3_host_prog = '~/venvs/neovim/bin/python3'
-
 :syntax on
 :set background=dark " Highlight searches
 :set hls
@@ -29,17 +26,3 @@ noremap <Right> <NOP>
 " To map <Esc> to exit terminal-mode:
 " https://neovim.io/doc/user/nvim_terminal_emulator.html
 :tnoremap <Esc> <C-\><C-n>
-
-call plug#begin()
-
-" Python
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-Plug 'psf/black'
-
-" Elixir
-Plug 'elixir-editors/vim-elixir'
-
-" Git
-Plug 'tpope/vim-fugitive'
-
-call plug#end()
